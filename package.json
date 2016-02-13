@@ -1,0 +1,19 @@
+{
+  "name": "bookormovie",
+  "version": "1.0.0",
+  "description": "An app for deciding whether to see the movie or read the book first",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamwilbert/BookOrMovie.git"
+  },
+  "author": "Adam Wilbert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamwilbert/BookOrMovie/issues"
+  },
+  "homepage": "https://github.com/adamwilbert/BookOrMovie#readme"
+}
