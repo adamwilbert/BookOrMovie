@@ -21,4 +21,23 @@ router.put('/properties/api/:id', propertiesController.update)
 router.delete('/properties/api/:id', propertiesController.delete)
 
 
+//passport routing
+require("../config/passport")(passport)
+router.get('/auth/google', passport.authenticate(
+    'google',
+    { scope:  'https://www.googleapis.com/auth/plus.login' }
+  ));
+  router.get('/auth/google/callback', passport.authenticate(
+    'google',
+    {
+      successRedirect: '/',
+      failureRedirect: '/fail'
+    }
+  ));
+
+  router.get('/logout', function(req, res){
+    req.logout();
+    res.redirect('/');
+  });
+
 module.exports = router
