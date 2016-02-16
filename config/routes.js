@@ -18,8 +18,11 @@ router.get('/properties/api', propertiesController.all)
 router.post('/properties/api', propertiesController.create)
 router.get('/properties/api/:id', propertiesController.show)
 router.put('/properties/api/:id', propertiesController.update)
+router.put('/properties/api/movieVote/:id', propertiesController.movieVote)
+router.put('/properties/api/bookVote/:id', propertiesController.bookVote)
 router.delete('/properties/api/:id', propertiesController.delete)
-
+router.get('/users/api', usersController.all)
+router.get('/users/api/:id', usersController.show)
 
 //passport routing
 require("../config/passport")(passport)

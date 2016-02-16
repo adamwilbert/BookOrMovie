@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/adamwilbert/BookOrMovie#readme",
   "dependencies": {
+    "angular-local-storage": "^0.2.2",
     "body-parser": "^1.15.0",
     "cookie-parser": "^1.4.1",
     "cors": "^2.7.1",
@@ -26,6 +27,7 @@
     "mongoose": "^4.4.3",
     "morgan": "^1.6.1",
     "passport": "^0.3.2",
-    "passport-google": "^0.3.0"
+    "passport-google": "^0.3.0",
+    "request-promise": "^2.0.0"
   }
 }
