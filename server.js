@@ -12,7 +12,7 @@ var cors = require('cors')
 
 // Load local libraries.
 var routes   = require('./config/routes');
-require('./config/database')
+  require('./config/database')
 
 // Instantiate a server application.
 var app = express();
@@ -24,7 +24,7 @@ app.use(cors())
 app.use( express.static( "public" ) );
 
 // Logging layer.
-app.use(logger('dev'));
+// app.use(logger('dev'));
 
 // Helper layer (parses the requests, and adds further data).
 app.use(bodyParser.json());
