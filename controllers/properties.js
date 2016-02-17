@@ -44,7 +44,7 @@ module.exports = {
         };
         rp(options)
             .then(function (body) {
-              newProperty.bookCriticReview = Number(body.substring(body.indexOf('<average_rating>')+16,body.indexOf('<average_rating>')+19))/5*100
+              newProperty.bookCriticReview = Math.round(Number(body.substring(body.indexOf('<average_rating>')+16,body.indexOf('<average_rating>')+19))/5*100)
               newProperty.save(function (err) {
               if (err){
                 console.log(err);
