@@ -1,7 +1,7 @@
 var express   = require('express'),
     router    = express.Router(),
-    passport  = require('passport');
-require("../config/passport")(passport)
+    // passport  = require('passport');
+// require("../config/passport")(passport)
 var User = require("../models/user");
 
 var usersController   = require('../controllers/users');
