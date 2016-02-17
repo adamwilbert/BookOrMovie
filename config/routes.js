@@ -25,22 +25,22 @@ router.get('/users/api', usersController.all)
 router.get('/users/api/:id', usersController.show)
 
 //passport routing
-require("../config/passport")(passport)
-router.get('/auth/google', passport.authenticate(
-    'google',
-    { scope:  'https://www.googleapis.com/auth/plus.login' }
-  ));
-  router.get('/auth/google/callback', passport.authenticate(
-    'google',
-    {
-      successRedirect: '/',
-      failureRedirect: '/fail'
-    }
-  ));
+// require("../config/passport")(passport)
+// router.get('/auth/google', passport.authenticate(
+//     'google',
+//     { scope:  'https://www.googleapis.com/auth/plus.login' }
+//   ));
+//   router.get('/auth/google/callback', passport.authenticate(
+//     'google',
+//     {
+//       successRedirect: '/',
+//       failureRedirect: '/fail'
+//     }
+//   ));
 
-  router.get('/logout', function(req, res){
-    req.logout();
-    res.redirect('/');
-  });
+//   router.get('/logout', function(req, res){
+//     req.logout();
+//     res.redirect('/');
+//   });
 
 module.exports = router
