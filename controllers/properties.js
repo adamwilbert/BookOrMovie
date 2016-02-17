@@ -26,7 +26,7 @@ module.exports = {
         rp(options)
         .then(function (body) {
           if (body.Writer.indexOf('novel')===-1 && body.Writer.indexOf('short story')==-1)  {
-            res.send('only a movie, not a book')
+           return res.send('only a movie, not a book')
           }
           else{
             newProperty.movieTitle = body.Title
