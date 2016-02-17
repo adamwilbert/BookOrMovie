@@ -74,7 +74,7 @@ module.exports = {
       console.log(req.body)
     Property.findOneAndUpdate(({_id: req.params.id}), { $push: {
           movieVotes: {
-            userId: req.body.userId
+            "userId": req.body.userId
           }
         }
       }, function (err) {
