@@ -1,3 +1,5 @@
+//no longer using passport for backend authentication, saving in case I change my mind.
+
 // var User = require('../models/user');
 // var GoogleStrategy = require('passport-google').OAuth2Strategy;
 

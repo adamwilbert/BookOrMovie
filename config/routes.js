@@ -1,6 +1,6 @@
 var express   = require('express')
 var router    = express.Router()
-    // passport  = require('passport');
+// var passport  = require('passport');
 // require("../config/passport")(passport)
 var User = require("../models/user");
 
@@ -24,7 +24,8 @@ router.delete('/properties/api/:id', propertiesController.delete)
 router.get('/users/api', usersController.all)
 router.get('/users/api/:id', usersController.show)
 
-//passport routing
+//passport routing, keeping around for good measure.
+
 // require("../config/passport")(passport)
 // router.get('/auth/google', passport.authenticate(
 //     'google',
