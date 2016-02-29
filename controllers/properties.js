@@ -31,7 +31,7 @@ module.exports = {
         .then(function (body) {
           if (body.Writer.indexOf('novel')===-1 && body.Writer.indexOf('short story')==-1)  {
            return res.send('only a movie, not a book')
-          }
+          } 
           else{
             newProperty.movieTitle = body.Title
             newProperty.poster = body.Poster
