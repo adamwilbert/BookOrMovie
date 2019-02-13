@@ -20,9 +20,9 @@ module.exports = {
   create: function (req, res, next) {
     var newProperty = new Property();
 
-
+    console.log(process.env.OMDB_API_KEY)
     var options = {
-      uri: `http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}y=&plot=short&r=json&t=${req.query.t}`,
+      uri: `http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&y=&plot=short&r=json&t=${req.query.t}`,
       json: true // Automatically parses the JSON string in the response
     }
     rp(options)
@@ -42,6 +42,7 @@ module.exports = {
           }
         }
       })
+      .catch((err => console.log(err)))
 
 
     // here we reset our options to make a another request/promise call this time to the book api.
